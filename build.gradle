@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = "socket.WebSocketClient"
+
+dependencies {
+    compile 'io.netty:netty-all:4.0.30.Final'
+    compile 'io.reactivex:rxjava:1.0.10'
+    compile "com.appunite:websockets-java:2.0.0"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
